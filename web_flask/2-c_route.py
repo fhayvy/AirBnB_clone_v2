@@ -7,6 +7,7 @@ You must use the option strict_slashes=False in your route definition
 """
 
 from flask import Flask
+from markupsafe import escape
 
 app = Flask(__name__)
 
@@ -24,7 +25,7 @@ def hbnb():
 
 
 @app.route('/c/<text>',  strict_slashes=False)
-def c_text():
+def c_text(text):
     """Displays C followed by the text variable
     (replace underscore symbol _ with a space
     """
