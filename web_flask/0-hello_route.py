@@ -13,8 +13,8 @@ app = Flask(__name__)
 
 @app.route('/',  strict_slashes=False)
 def hello():
-    """Displays Hello Flask!
-    """return "Hello HBNB!"
+    """Displays Hello Flask!"""
+    return "Hello HBNB!"
 
 
 if __name__ == "__main__":
