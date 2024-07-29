@@ -7,7 +7,6 @@ You must use the option strict_slashes=False in your route definition
 """
 
 from flask import Flask
-from markupsafe import escape
 
 app = Flask(__name__)
 
@@ -31,7 +30,7 @@ def c_text(text):
     """
 
     txt = text.replace('_', ' ')
-    return f"C{escape(txt)}"
+    return f"C {txt}"
 
 
 if __name__ == "__main__":
