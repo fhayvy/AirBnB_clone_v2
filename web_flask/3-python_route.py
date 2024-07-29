@@ -33,6 +33,7 @@ def c_text(text):
     return f"C {txt}"
 
 
+@app.route('/python',  strict_slashes=False)
 @app.route('/python/<text>',  strict_slashes=False)
 def python_text(text):
     """Displays Python followed by the text variable
